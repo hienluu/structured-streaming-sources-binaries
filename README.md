@@ -1,7 +1,7 @@
 Below is the instructions for using the WikiEdit custom Spark V2 data source for analyzing wiki edits in spark-shell.
-* Clone this repository to on your local machine
-* Start up spark-shell with --jars argument to include the jar file into Spark driver and executor class path
-  * spark-shell --jars <path>streaming_sources-assembly-0.0.1.jar
+* Clone this repository on your local machine - git clone https://github.com/hienluu/structured-streaming-sources-binaries.git
+* Start up spark-shell with --jars argument to include the streaming_sources-assembly-0.0.1.jar jar file into Spark driver and executor class path
+  * spark-shell --jars <path>/streaming_sources-assembly-0.0.1.jar
 * Once spark-shell is successfully started, try the following snippet of code
 
 ```
@@ -20,5 +20,5 @@ wikiEditQS.stop
 
 ```
 
-The source code for this custom data source is available in this Github repository - https://github.com/hienluu/structured-streaming-sources
+The source code for this custom data source is available in Github repository - https://github.com/hienluu/structured-streaming-sources
 
