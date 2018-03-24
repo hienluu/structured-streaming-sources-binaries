@@ -13,12 +13,14 @@ val wikiEditSmallDF = wikiEditDF.select("timestamp", "user", "channel", "title")
 
 val wikiEditQS = wikiEditSmallDF.writeStream.format("console").option("truncate", "false").start()
 
-// wait for a few seconds before wiki edits to come in and they will be displayed in the console
+// wait for a few seconds before the wiki edits to show up in console
 
-// when you want to sto
+// when you want to stop
 wikiEditQS.stop
 
 ```
+* en_wikipedia represents English Wikipedia channel. You can try #es.wikipedia, #ja.wikipedia, #fr.wikipedia
+  * A list of channels are available at https://en.wikipedia.org/wiki/Wikipedia:IRC
 
 The source code for this custom data source is available in Github repository - https://github.com/hienluu/structured-streaming-sources
 
