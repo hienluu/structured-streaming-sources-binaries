@@ -1,11 +1,11 @@
-Below is the instructions for using the WikiEdit custom Spark V2 data source for analyzing wiki edits in spark-shell.
+Below is the instructions for using the WikiEdit custom Spark V2 data source in Spark 3.x version to analyze wiki edits in spark-shell.
 * Clone this repository on your local machine - git clone https://github.com/hienluu/structured-streaming-sources-binaries.git
-* Start up spark-shell with --jars argument to include the streaming_sources-assembly-0.0.1.jar jar file into Spark driver and executor class path
-  * spark-shell --jars <path>/streaming_sources-assembly-0.0.1.jar
+* Start up spark-shell with --jars argument to include the streaming-sources-spark-3.0.jar jar file into Spark driver and executor class path
+  * spark-shell --jars <path>/streaming-sources-spark-3.0.jar
 * Once spark-shell is successfully started, try the following snippet of code
 
 ```
-val provideClassName = "org.structured_streaming_sources.wikedit.WikiEditSourceV2"
+val provideClassName = "org.structured_streaming_sources.wikiedit.WikiEditSourceProvider"
 
 val wikiEditDF = spark.readStream.format(provideClassName).option("channel", "#en.wikipedia").load()
 
